@@ -1,0 +1,169 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* 
+      New bubblegum color palette:
+      Muted pastels with pink, blue, and purple tones
+    */
+    --background: 310 25% 96%;             /* Very light pink base */
+    --foreground: 260 15% 25%;             /* Dark purple-gray for text */
+
+    --card: 320 35% 92%;                   /* Soft pink card background */
+    --card-foreground: 260 15% 25%;        /* Dark text on cards */
+
+    --popover: 280 30% 95%;                /* Light purple popovers */
+    --popover-foreground: 260 15% 25%;
+
+    --primary: 240 45% 70%;                /* Soft blue primary */
+    --primary-foreground: 0 0% 100%;       /* White text on primary */
+
+    --secondary: 320 40% 75%;              /* Soft pink secondary */
+    --secondary-foreground: 260 15% 25%;   /* Dark text on secondary */
+
+    --muted: 290 25% 88%;                  /* Muted purple-pink */
+    --muted-foreground: 260 20% 45%;       /* Medium dark for muted text */
+
+    --accent: 280 35% 80%;                 /* Light purple accent */
+    --accent-foreground: 260 15% 25%;
+
+    --destructive: 350 60% 65%;            /* Soft red */
+    --destructive-foreground: 0 0% 100%;   /* White text */
+
+    --border: 300 20% 85%;                 /* Light pink border */
+    --input: 300 20% 85%;
+    --ring: 240 45% 70%;                   /* Blue focus ring */
+    
+    --radius: 0.75rem;
+
+    /* Custom bubblegum colors */
+    --bubblegum-pink: 320 40% 85%;
+    --bubblegum-blue: 240 35% 82%;
+    --bubblegum-purple: 280 30% 80%;
+    --bubblegum-lavender: 260 25% 85%;
+
+    --sidebar-background: 310 20% 98%;
+    --sidebar-foreground: 260 15% 25%;
+    --sidebar-primary: 240 45% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 320 25% 90%;
+    --sidebar-accent-foreground: 260 15% 25%;
+    --sidebar-border: 300 20% 85%;
+    --sidebar-ring: 240 45% 70%;
+  }
+
+  .dark {
+    --background: 260 15% 8%;
+    --foreground: 320 25% 95%;
+    --card: 260 20% 12%;
+    --card-foreground: 320 25% 95%;
+    --popover: 260 20% 10%;
+    --popover-foreground: 320 25% 95%;
+    --primary: 240 45% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 320 30% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 260 15% 15%;
+    --muted-foreground: 320 15% 70%;
+    --accent: 280 25% 70%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 350 50% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 15% 20%;
+    --input: 260 15% 20%;
+    --ring: 240 45% 65%;
+    --bubblegum-pink: 320 30% 25%;
+    --bubblegum-blue: 240 25% 22%;
+    --bubblegum-purple: 280 20% 20%;
+    --bubblegum-lavender: 260 15% 25%;
+    --sidebar-background: 260 15% 8%;
+    --sidebar-foreground: 320 25% 95%;
+    --sidebar-primary: 240 45% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 15% 15%;
+    --sidebar-accent-foreground: 320 25% 95%;
+    --sidebar-border: 260 15% 20%;
+    --sidebar-ring: 240 45% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, 
+      hsl(var(--background)) 0%, 
+      hsl(320 20% 94%) 25%, 
+      hsl(240 15% 96%) 50%, 
+      hsl(280 18% 95%) 75%, 
+      hsl(var(--background)) 100%
+    );
+    min-height: 100vh;
+  }
+
+  html {
+    @apply dark;
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  display: flex;
+}
+
+/* Bubblegum gradient backgrounds */
+.bubblegum-bg {
+  background: linear-gradient(135deg, 
+    hsl(320 25% 92%) 0%, 
+    hsl(240 20% 94%) 25%, 
+    hsl(280 22% 93%) 50%, 
+    hsl(320 18% 95%) 75%, 
+    hsl(240 15% 96%) 100%
+  );
+}
+
+.bubblegum-bg-alt {
+  background: linear-gradient(45deg, 
+    hsl(280 20% 94%) 0%, 
+    hsl(320 22% 93%) 35%, 
+    hsl(240 18% 95%) 70%, 
+    hsl(280 15% 96%) 100%
+  );
+}
+
+.bubblegum-card {
+  background: hsl(var(--bubblegum-pink));
+  border: 1px solid hsl(var(--border));
+}
+
+.bubblegum-card-blue {
+  background: hsl(var(--bubblegum-blue));
+  border: 1px solid hsl(var(--border));
+}
+
+.bubblegum-card-purple {
+  background: hsl(var(--bubblegum-purple));
+  border: 1px solid hsl(var(--border));
+}
+
+/* Ensure smooth scrolling on mobile */
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+}
