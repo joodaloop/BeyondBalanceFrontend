@@ -1,14 +1,7 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -47,22 +40,22 @@ const UpcomingEvents = () => {
       try {
         setLoading(true);
         setError(null);
-        
-        const response = await fetch('https://web-production-6d157.up.railway.app/events');
-        
+
+        const response = await fetch("https://web-production-6d157.up.railway.app/events");
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const data: APIResponse = await response.json();
-        
-        if (data.status === 'success') {
+
+        if (data.status === "success") {
           setEvents(data.data);
         } else {
-          throw new Error(data.message || 'Failed to fetch events');
+          throw new Error(data.message || "Failed to fetch events");
         }
       } catch (error) {
-        setError(error instanceof Error ? error.message : 'An unknown error occurred');
+        setError(error instanceof Error ? error.message : "An unknown error occurred");
       } finally {
         setLoading(false);
       }
@@ -73,21 +66,21 @@ const UpcomingEvents = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
   };
 
   const formatTime = (timeString: string) => {
-    const [hours, minutes] = timeString.split(':');
+    const [hours, minutes] = timeString.split(":");
     const date = new Date();
     date.setHours(parseInt(hours), parseInt(minutes));
-    return date.toLocaleTimeString('en-US', { 
-      hour: 'numeric', 
-      minute: '2-digit',
-      hour12: true 
+    return date.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
     });
   };
 
@@ -129,9 +122,7 @@ const UpcomingEvents = () => {
           <div className="text-center">
             <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight mb-8">
               UPCOMING
-              <span className="block text-primary font-normal italic transform rotate-1 mt-2">
-                EVENTS
-              </span>
+              <span className="block text-primary font-normal italic transform rotate-1 mt-2">EVENTS</span>
             </h2>
             <p className="text-xl text-muted-foreground">No upcoming events at the moment. Check back soon!</p>
           </div>
@@ -147,7 +138,7 @@ const UpcomingEvents = () => {
       <div className="absolute top-20 left-16 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-32 right-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
       <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-primary/8 rounded-full blur-2xl opacity-60"></div>
-      
+
       <div className="relative max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -158,16 +149,14 @@ const UpcomingEvents = () => {
         >
           <h2 className="text-5xl md:text-6xl font-light text-foreground leading-tight">
             UPCOMING
-            <span className="block text-primary font-normal italic transform rotate-1 mt-2">
-              EVENTS
-            </span>
+            <span className="block text-primary font-normal italic transform rotate-1 mt-2">EVENTS</span>
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-full mx-auto opacity-60"></div>
           <p className="text-xl text-muted-foreground font-light max-w-3xl mx-auto leading-relaxed">
             Join our community events designed to support your mental wellness journey
           </p>
         </motion.div>
-        
+
         <div className="relative">
           <Carousel className="w-full">
             <CarouselContent className="-ml-2 md:-ml-4">
@@ -190,23 +179,23 @@ const UpcomingEvents = () => {
                           Pending
                         </div>
                       )} */}
-                      
+
                       <div className="aspect-video w-full overflow-hidden">
-                        <img 
-                          src={event.image_url} 
+                        <img
+                          src={event.image_url}
                           alt={event.title}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                           onError={(e) => {
-                            (e.target as HTMLImageElement).src = "https://cyzofnicsspmbsqdrkla.supabase.co/storage/v1/object/public/landing-assets//img13.jpg";
+                            (e.target as HTMLImageElement).src = "/img13.jpg";
                           }}
                         />
                       </div>
-                      
+
                       <div className="p-8 space-y-6">
                         <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                           {event.title}
                         </h3>
-                        
+
                         <div className="space-y-4">
                           <div className="flex items-center text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                             <Calendar className="w-4 h-4 mr-3 text-primary" />
@@ -221,16 +210,14 @@ const UpcomingEvents = () => {
                             <span className="text-sm font-light">{event.location}</span>
                           </div>
                         </div>
-                        
-                        <p className="text-sm text-muted-foreground leading-relaxed font-light">
-                          {event.description}
-                        </p>
-                        
-                        <Button 
+
+                        <p className="text-sm text-muted-foreground leading-relaxed font-light">{event.description}</p>
+
+                        <Button
                           className="w-full bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                           onClick={() => {
                             if (event.luma_link) {
-                              window.open(event.luma_link, '_blank');
+                              window.open(event.luma_link, "_blank");
                             }
                           }}
                         >
