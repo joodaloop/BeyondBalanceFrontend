@@ -178,7 +178,7 @@ const HeroSection = () => {
           >
             <div className="relative w-[min(100%,500px)] aspect-square rounded-3xl overflow-hidden shadow-2xl bubblegum-card">
               <img
-                src="/IMG_0354.JPG"
+                src="/IMG_0354.jpeg"
                 alt="Person practicing mindfulness and wellness"
                 className="w-full h-full object-cover"
               />
