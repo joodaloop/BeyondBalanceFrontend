@@ -15,10 +15,10 @@ const FoundersSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-tight">
-            Our <span className="text-primary block font-normal italic transform rotate-1 inline-block">Founders</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground uppercase">
+            Meet Our <div className="text-primary block font-bold">Founders</div>
           </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto mt-6"></div>
+          {/*<div className="w-32 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto mt-6"></div>*/}
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -58,21 +58,23 @@ const FoundersSection = () => {
               <div className="space-y-6">
                 <div className="space-y-6 text-base md:text-lg leading-relaxed">
                   <p className="text-muted-foreground font-light">
-                    Built on a deep foundation of psychological insight and heartfelt intention, Beyond Balance is
-                    co-founded by two passionate minds with a shared mission to make mental wellness feel less clinical
-                    and more human. They knew one thing for sure — healing should feel human. With a strong foundation
-                    in psychological theory and real-life experience, they combine deep knowledge with grounded,
+                    Built on a deep foundation of psychological insight and heartfelt intention,
+                    Beyond Balance is co-founded by two passionate minds with a shared mission to
+                    make mental wellness feel less clinical and more human. They knew one thing for
+                    sure — healing should feel human. With a strong foundation in psychological
+                    theory and real-life experience, they combine deep knowledge with grounded,
                     approachable care.
                   </p>
                   <p className="text-muted-foreground font-light">
-                    They're quick thinkers with a warm, vibrant presence, the kind of people who make deep conversations
-                    feel light, and growth feel exciting. Whether they're helping you untangle your thoughts or guiding
-                    you back to balance, they do it with energy, empathy, and heart. No masks, no jargon — just
-                    authentic support with a spark.
+                    They're quick thinkers with a warm, vibrant presence, the kind of people who
+                    make deep conversations feel light, and growth feel exciting. Whether they're
+                    helping you untangle your thoughts or guiding you back to balance, they do it
+                    with energy, empathy, and heart. No masks, no jargon — just authentic support
+                    with a spark.
                   </p>
                   <p className="text-muted-foreground font-light">
-                    Together, they've created a space where support is soulful, science-backed, and anything but boring
-                    because balance should go beyond just feeling "fine."
+                    Together, they've created a space where support is soulful, science-backed, and
+                    anything but boring because balance should go beyond just feeling "fine."
                   </p>
                 </div>
               </div>

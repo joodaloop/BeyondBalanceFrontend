@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,7 +8,6 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import GetStarted from "./pages/GetStarted";
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 import Workshops from "./pages/Workshops";
@@ -22,19 +20,20 @@ import Retreats from "./pages/Retreats";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import CrisisResources from "./pages/CrisisResources";
+import Childcare from "./pages/Childcare";
 
 const queryClient = new QueryClient();
 
 // Component to handle scrolling on route changes
 const ScrollToTop = () => {
   const location = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
     // Reset body overflow to ensure scrolling works
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
   }, [location.pathname]);
-  
+
   return null;
 };
 
@@ -57,8 +56,8 @@ const App = () => (
           <Route path="/services/newsletter" element={<Newsletter />} />
           <Route path="/services/retreats" element={<Retreats />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/childcare" element={<Childcare />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/get-started" element={<GetStarted />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/crisis-resources" element={<CrisisResources />} />

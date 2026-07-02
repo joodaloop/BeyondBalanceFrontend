@@ -59,9 +59,27 @@ const HeroSection = () => {
 
       {/* Circular gradients for pop of color */}
       <CircularGradient size="300px" opacity={0.03} duration={20} className="top-10 left-10" />
-      <CircularGradient size="250px" opacity={0.04} duration={15} delay={3} className="bottom-20 right-16" />
-      <CircularGradient size="200px" opacity={0.05} duration={18} delay={6} className="top-1/3 right-1/4" />
-      <CircularGradient size="280px" opacity={0.03} duration={22} delay={9} className="bottom-1/4 left-1/3" />
+      <CircularGradient
+        size="250px"
+        opacity={0.04}
+        duration={15}
+        delay={3}
+        className="bottom-20 right-16"
+      />
+      <CircularGradient
+        size="200px"
+        opacity={0.05}
+        duration={18}
+        delay={6}
+        className="top-1/3 right-1/4"
+      />
+      <CircularGradient
+        size="280px"
+        opacity={0.03}
+        duration={22}
+        delay={9}
+        className="bottom-1/4 left-1/3"
+      />
 
       {/* Floating bubblegum bubbles */}
       <motion.div
@@ -116,7 +134,12 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
-          <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="space-y-8"
+          >
             <h1 className="leading-tight space-y-4 text-left">
               <motion.span
                 className="block text-4xl md:text-5xl lg:text-6xl font-light text-foreground"
@@ -140,11 +163,11 @@ const HeroSection = () => {
 
             <motion.div variants={itemVariants} className="space-y-8">
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl font-light leading-relaxed">
-                Find your center and nurture your growth with our comprehensive mental health services. Your journey to
-                wellness begins here.
+                Find your center and nurture your growth with our comprehensive mental health
+                services. Your journey to wellness begins here.
               </p>
 
-              <Link to="/get-started" className="inline-block mt-8">
+              <Link to="/contact" className="inline-block mt-8">
                 <motion.div
                   whileHover={{
                     scale: 1.02,

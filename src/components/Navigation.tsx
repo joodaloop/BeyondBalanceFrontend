@@ -107,51 +107,26 @@ const Navigation = () => {
     {
       to: "/",
       label: "Home",
-      sections: [
-        { name: "Hero Section", hash: "#hero" },
-        { name: "Upcoming Events", hash: "#events" },
-        { name: "Statistics", hash: "#stats" },
-        { name: "Journey Stages", hash: "#stages" },
-        { name: "Comparison", hash: "#comparison" },
-      ],
     },
     {
       to: "/about",
       label: "About Us",
-      sections: [
-        { name: "Book Appointment", hash: "#appointment" },
-        { name: "Accessibility", hash: "#accessibility" },
-        { name: "Founders", hash: "#founders" },
-        { name: "Vision & Mission", hash: "#vision" },
-      ],
     },
     {
       to: "/services",
       label: "Services",
-      sections: [
-        { name: "Workshops", to: "/services/workshops" },
-        { name: "Handbooks & Guides", to: "/services/handbooks" },
-        { name: "Seminars & Webinars", to: "/services/seminars-webinars" },
-        { name: "Ecosystem of Care", to: "/services/ecosystem-of-care" },
-        { name: "MHFA", to: "/services/mhfa" },
-        { name: "Retreats", to: "/services/retreats" },
-      ],
+    },
+    {
+      to: "/childcare",
+      label: "Childcare",
     },
     {
       to: "/resources",
       label: "Resources",
-      sections: [
-        { name: "Tailored Resources", hash: "#tailored-resources" },
-        { name: "Crisis Resources", hash: "#crisis-resources" },
-      ],
     },
     {
       to: "/contact",
       label: "Contact Us",
-      sections: [
-        { name: "Contact Form", hash: "#contact-form" },
-        { name: "FAQ", hash: "#faq" },
-      ],
     },
   ];
 
@@ -214,7 +189,7 @@ const Navigation = () => {
 
       {/* Desktop Get Started Button */}
       <div className="hidden md:block">
-        <Link to="/get-started">
+        <Link to="/contact">
           <Button
             variant="outline"
             className="border-primary text-primary hover:bg-primary hover:text-white"
@@ -248,7 +223,7 @@ const Navigation = () => {
               </Link>
             ))}
             <DropdownMenuSeparator className="my-3" />
-            <Link to="/get-started" className="w-full block mt-2">
+            <Link to="/contact" className="w-full block mt-2">
               <Button
                 variant="outline"
                 className="w-full border-primary text-primary hover:bg-primary hover:text-white py-4 text-lg font-medium rounded-xl"

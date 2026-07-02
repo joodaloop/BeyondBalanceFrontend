@@ -1,8 +1,18 @@
-
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, X, AlertTriangle, Brain, Heart, Target, Shield, Star, Clock, Users } from "lucide-react";
+import {
+  Check,
+  X,
+  AlertTriangle,
+  Brain,
+  Heart,
+  Target,
+  Shield,
+  Star,
+  Clock,
+  Users,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ComparisonTable = () => {
@@ -10,59 +20,63 @@ const ComparisonTable = () => {
     {
       icon: <Brain className="w-4 h-4" />,
       withUs: "Grounded in psychology — backed by research, theory, and training",
-      others: "Often based on personal experience alone, not psychological science"
+      others: "Often based on personal experience alone, not psychological science",
     },
     {
       icon: <Heart className="w-4 h-4" />,
-      withUs: "CBT, Emotion Theory, Inner Child Work, Attachment Theory — all integrated thoughtfully",
-      others: 'Uses broad advice like "just manifest" or "change your mindset"'
+      withUs:
+        "CBT, Emotion Theory, Inner Child Work, Attachment Theory — all integrated thoughtfully",
+      others: 'Uses broad advice like "just manifest" or "change your mindset"',
     },
     {
       icon: <Target className="w-4 h-4" />,
       withUs: "Blended: Traditional wisdom + modern science",
-      others: "Can lean too far into pseudoscience or spiritual bypassing"
+      others: "Can lean too far into pseudoscience or spiritual bypassing",
     },
     {
       icon: <Users className="w-4 h-4" />,
       withUs: "Every conversation is customized — no scripts or one-size-fits-all",
-      others: "Generic affirmations and pre-written routines"
+      others: "Generic affirmations and pre-written routines",
     },
     {
       icon: <Shield className="w-4 h-4" />,
       withUs: "Inclusive, trauma-aware, and neurodiversity-friendly",
-      others: "Often overlook real-world struggles and psychological safety"
+      others: "Often overlook real-world struggles and psychological safety",
     },
     {
       icon: <Star className="w-4 h-4" />,
       withUs: "Compassionate AND structured — feel seen, but also get practical tools",
-      others: 'Overemphasis on "feeling better" instead of understanding why you feel that way'
+      others: 'Overemphasis on "feeling better" instead of understanding why you feel that way',
     },
     {
       icon: <Clock className="w-4 h-4" />,
       withUs: "No pressure, no selling, no timelines — healing moves at your pace",
-      others: 'Packages, "healing in 3 weeks" promises, or upsells'
+      others: 'Packages, "healing in 3 weeks" promises, or upsells',
     },
     {
       icon: <Brain className="w-4 h-4" />,
       withUs: "Real tools: emotion regulation, self-talk shifts, identity work, boundaries",
-      others: 'Vague: "align your energy," "raise your frequency," etc.'
+      others: 'Vague: "align your energy," "raise your frequency," etc.',
     },
     {
       icon: <Shield className="w-4 h-4" />,
       withUs: "Ethical — rooted in values, consent, and respect for your unique journey",
-      others: "Unregulated, sometimes misinformed advice that can do harm"
-    }
+      others: "Unregulated, sometimes misinformed advice that can do harm",
+    },
   ];
 
   return (
-    <section id="comparison" className="py-16 md:py-24 px-4 md:px-6 bg-gradient-to-br from-background via-card/10 to-background relative overflow-hidden">
+    <section
+      id="comparison"
+      className="py-16 md:py-24 px-4 md:px-6 bg-gradient-to-br from-background via-card/10 to-background relative overflow-hidden"
+    >
       {/* Background decoration */}
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         className="absolute top-20 right-20 w-32 h-32 rounded-full bg-gradient-to-br from-primary/5 to-secondary/5 blur-xl"
       />
-      
+
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -114,7 +128,7 @@ const ComparisonTable = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`grid grid-cols-2 border-b border-border/30 ${
-                index % 2 === 0 ? 'bg-background/50' : 'bg-card/30'
+                index % 2 === 0 ? "bg-background/50" : "bg-card/30"
               }`}
             >
               <div className="p-4 md:p-6 border-r border-border/30">
@@ -150,16 +164,15 @@ const ComparisonTable = () => {
           className="text-center mt-12 md:mt-16"
         >
           <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Ready to experience the Beyond Balance difference? Join thousands who have transformed their mental wellness journey.
+            Ready to experience the Beyond Balance difference? Join thousands who have transformed
+            their mental wellness journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/get-started">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto">
-                Start Your Journey
-              </Button>
-            </Link>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg w-full sm:w-auto"
+              >
                 Contact Us
               </Button>
             </Link>

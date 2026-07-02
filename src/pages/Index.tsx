@@ -95,22 +95,24 @@ const Index = () => {
         <ComparisonTable />
       </motion.div>
 
-      <MultiLayeredWave height={90} className="my-16" />
+      {/*<MultiLayeredWave height={90} className="my-16" />*/}
 
-      <ColorfulAccent accentType="glow" intensity="medium" className="my-8">
-        <motion.div
-          id="philosophy"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
-        >
-          <ClosingPhilosophy />
-        </motion.div>
-      </ColorfulAccent>
-
-      <WaveDivider position="bottom" height={140} className="my-12" />
-
+      {/*<ColorfulAccent accentType="glow" intensity="medium" className="my-8">*/}
       <motion.div
+        id="philosophy"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
+      >
+        <ClosingPhilosophy />
+      </motion.div>
+      <br />
+      <br />
+      {/*</ColorfulAccent>*/}
+
+      {/*<WaveDivider position="bottom" height={140} className="my-12" />*/}
+
+      {/*<motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
@@ -118,7 +120,7 @@ const Index = () => {
         <CrisisResources />
       </motion.div>
 
-      <WaveDivider position="top" height={100} className="mb-0" />
+      <WaveDivider position="top" height={100} className="mb-0" />*/}
       <Footer />
     </AnimatedBackground>
   );

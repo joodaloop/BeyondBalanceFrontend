@@ -29,8 +29,8 @@ const BookAppointmentSection = () => {
             Today
           </h1>
           <p className="text-xl md:text-2xl text-background/90 max-w-2xl font-light leading-relaxed">
-            Take the first step towards your mental wellness with personalized, psychology-informed support designed
-            just for you.
+            Take the first step towards your mental wellness with personalized, psychology-informed
+            support designed just for you.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ const BookAppointmentSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex-shrink-0"
         >
-          <Link to="/get-started">
+          <Link to="/contact">
             <Button
               size="lg"
               className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary px-12 py-6 text-xl font-light rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
