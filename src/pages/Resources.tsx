@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import DetailedResourcesSection from "@/components/DetailedResourcesSection";
@@ -16,7 +15,7 @@ const Resources = () => {
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
@@ -24,7 +23,7 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -33,14 +32,13 @@ const Resources = () => {
         className="pt-24 pb-16 px-6 bg-gradient-to-br from-background via-card/20 to-background"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-light text-foreground mb-6">
+          <h1 className="text-4xl md:text-6xl font-light text-foreground my-12">
             MENTAL HEALTH
-            <span className="block font-bold text-primary italic">
-              RESOURCES
-            </span>
+            <span className="block font-bold text-primary italic">RESOURCES</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover comprehensive resources tailored to your unique journey toward mental wellness and personal growth.
+            Discover comprehensive resources tailored to your unique journey toward mental wellness
+            and personal growth.
           </p>
         </div>
       </motion.section>

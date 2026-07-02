@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PersonalityQuiz from "@/components/PersonalityQuiz";
@@ -22,17 +21,19 @@ const GetStarted = () => {
       resources: [
         {
           name: "Mental Health America – Self‑Help Tools",
-          description: "Screener tools for anxiety, depression, PTSD, and more. Private and beginner‑friendly.",
+          description:
+            "Screener tools for anxiety, depression, PTSD, and more. Private and beginner‑friendly.",
           url: "https://mhanational.org/resources/self-help-tools/",
-          tags: ["Screening", "Assessment"]
+          tags: ["Screening", "Assessment"],
         },
         {
           name: "Gratitude Journaling Benefits",
-          description: "Experts highlight improved sleep, reduced anxiety, and increased satisfaction.",
+          description:
+            "Experts highlight improved sleep, reduced anxiety, and increased satisfaction.",
           url: "https://www.vogue.com/article/gratitude-journal",
-          tags: ["Journaling", "Sleep"]
-        }
-      ]
+          tags: ["Journaling", "Sleep"],
+        },
+      ],
     },
     {
       icon: Users,
@@ -43,15 +44,15 @@ const GetStarted = () => {
           name: "Men's Health – Mental Wellness Stories",
           description: "Personal narratives and insights on high-functioning anxiety.",
           url: "https://www.menshealth.com/mental-health/",
-          tags: ["Personal Stories", "Anxiety"]
+          tags: ["Personal Stories", "Anxiety"],
         },
         {
           name: "Calm Blog – Men's Mental Health Tips",
           description: "10 simple, realistic habits men can adopt for emotional well-being.",
           url: "https://blog.calm.com/blog/men-and-mental-health",
-          tags: ["Practical Tips", "Mindfulness"]
-        }
-      ]
+          tags: ["Practical Tips", "Mindfulness"],
+        },
+      ],
     },
     {
       icon: Heart,
@@ -62,26 +63,33 @@ const GetStarted = () => {
           name: "MGH Center for Women's Mental Health",
           description: "Psychiatric insights including postpartum depression treatments.",
           url: "https://womensmentalhealth.org/blog/",
-          tags: ["Postpartum", "Life Stages"]
+          tags: ["Postpartum", "Life Stages"],
         },
         {
           name: "Top Mental Health Apps for Women",
           description: "Apps like Shine, Moodfit, Sanvello combining mindfulness and self-care.",
           url: "https://www.huffington-news.com/empowering-women-the-top-mental-health-apps-for-self-care/",
-          tags: ["Apps", "Self-Care"]
-        }
-      ]
-    }
+          tags: ["Apps", "Self-Care"],
+        },
+      ],
+    },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <PersonalityQuiz />
-      <UserInfoForm />
-      
+      <div className="py-64 text-center">
+        <h2 className="text-4xl md:text-5xl font-light text-foreground">
+          GET IN
+          <span className="block font-bold text-primary italic transform -rotate-1">TOUCH</span>
+          <span className="block font-light text-secondary transform rotate-1">WITH US</span>
+        </h2>
+      </div>
+      {/*<PersonalityQuiz />*/}
+      {/*<UserInfoForm />*/}
+
       {/* Tailored Resources Section */}
-      <section className="py-24 px-6 bg-gradient-to-br from-background via-card/20 to-background">
+      {/*<section className="py-24 px-6 bg-gradient-to-br from-background via-card/20 to-background">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -165,7 +173,6 @@ const GetStarted = () => {
             ))}
           </div>
 
-          {/* See More Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -183,7 +190,7 @@ const GetStarted = () => {
             </Button>
           </motion.div>
         </div>
-      </section>
+      </section>*/}
 
       <Footer />
     </div>

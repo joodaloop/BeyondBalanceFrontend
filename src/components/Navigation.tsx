@@ -186,36 +186,39 @@ const Navigation = () => {
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-8">
         {navLinks.map((link) => (
-          <HoverCard key={link.to} openDelay={200} closeDelay={100}>
-            <HoverCardTrigger asChild>
-              <Link to={link.to} className="text-foreground hover:text-primary transition-colors">
-                {link.label}
-              </Link>
-            </HoverCardTrigger>
-            <HoverCardContent className="w-60 p-4">
-              <h4 className="font-semibold text-sm mb-3 text-primary">
-                {link.label} {link.label === "Services" ? "Pages" : "Sections"}
-              </h4>
-              <div className="space-y-2">
-                {link.sections.map((section) => (
-                  <button
-                    key={section.to || section.hash}
-                    onClick={() => handleSectionClick(section.to || link.to, section.hash)}
-                    className="block text-sm text-muted-foreground hover:text-foreground transition-colors p-2 rounded hover:bg-muted/50 w-full text-left"
-                  >
-                    {section.name}
-                  </button>
-                ))}
-              </div>
-            </HoverCardContent>
-          </HoverCard>
+          // <HoverCard key={link.to} openDelay={200} closeDelay={100}>
+          //   <HoverCardTrigger asChild>
+          <Link to={link.to} className="text-foreground hover:text-primary transition-colors">
+            {link.label}
+          </Link>
+          //   </HoverCardTrigger>
+          //   <HoverCardContent className="w-60 p-4">
+          //     <h4 className="font-semibold text-sm mb-3 text-primary">
+          //       {link.label} {link.label === "Services" ? "Pages" : "Sections"}
+          //     </h4>
+          //     <div className="space-y-2">
+          //       {link.sections.map((section) => (
+          //         <button
+          //           key={section.to || section.hash}
+          //           onClick={() => handleSectionClick(section.to || link.to, section.hash)}
+          //           className="block text-sm text-muted-foreground hover:text-foreground transition-colors p-2 rounded hover:bg-muted/50 w-full text-left"
+          //         >
+          //           {section.name}
+          //         </button>
+          //       ))}
+          //     </div>
+          //   </HoverCardContent>
+          // </HoverCard>
         ))}
       </div>
 
       {/* Desktop Get Started Button */}
       <div className="hidden md:block">
         <Link to="/get-started">
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+          <Button
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-white"
+          >
             Get Started
           </Button>
         </Link>

@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
@@ -27,7 +26,7 @@ const Index = () => {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 100);
     }
@@ -35,57 +34,90 @@ const Index = () => {
   return (
     <AnimatedBackground className="min-h-screen bg-background" intensity="subtle">
       <CircularGradients count={8} />
-      
-      <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
         <Navigation />
       </motion.div>
-      
+
       <ColorfulAccent accentType="glow" intensity="light">
-        <motion.div id="hero" initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}>
+        <motion.div
+          id="hero"
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+        >
           <HeroSection />
         </motion.div>
       </ColorfulAccent>
-      
-      <MultiLayeredWave height={80} className="my-8" />
-      
-      <motion.div id="events" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}>
+
+      {/*<MultiLayeredWave height={80} className="my-8" />*/}
+
+      {/*<motion.div id="events" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}>
         <UpcomingEvents />
-      </motion.div>
-      
-      <WaveDivider position="bottom" height={100} className="my-16" />
-      
-      <ColorfulAccent accentType="background" intensity="light" className="py-8">
-        <motion.div id="stats" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}>
+      </motion.div>*/}
+
+      {/*<WaveDivider position="bottom" height={100} className="my-16" />*/}
+
+      <ColorfulAccent accentType="background" intensity="light">
+        <motion.div
+          id="stats"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+        >
           <StatsGrid />
         </motion.div>
       </ColorfulAccent>
-      
+
       <MultiLayeredWave height={60} className="my-12" />
-      
-      <motion.div id="stages" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.5, ease: 'easeOut' }}>
+
+      <motion.div
+        id="stages"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+      >
         <StagesSection />
       </motion.div>
-      
+
       <WaveDivider position="top" height={120} className="my-20" />
-      
-      <motion.div id="comparison" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.6, ease: 'easeOut' }}>
+
+      <motion.div
+        id="comparison"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+      >
         <ComparisonTable />
       </motion.div>
-      
+
       <MultiLayeredWave height={90} className="my-16" />
-      
+
       <ColorfulAccent accentType="glow" intensity="medium" className="my-8">
-        <motion.div id="philosophy" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.7, ease: 'easeOut' }}>
+        <motion.div
+          id="philosophy"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
+        >
           <ClosingPhilosophy />
         </motion.div>
       </ColorfulAccent>
-      
+
       <WaveDivider position="bottom" height={140} className="my-12" />
-      
-      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.9, ease: 'easeOut' }}>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
+      >
         <CrisisResources />
       </motion.div>
-      
+
       <WaveDivider position="top" height={100} className="mb-0" />
       <Footer />
     </AnimatedBackground>

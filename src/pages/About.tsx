@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BookAppointmentSection from "@/components/BookAppointmentSection";
@@ -23,7 +22,7 @@ const About = () => {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 100);
     }
@@ -32,33 +31,33 @@ const About = () => {
     <AnimatedBackground className="min-h-screen bg-background" intensity="subtle">
       <CircularGradients count={6} />
       <Navigation />
-      
-      <ColorfulAccent accentType="glow" intensity="light">
+
+      {/*<ColorfulAccent accentType="glow" intensity="light">
         <div id="appointment">
           <BookAppointmentSection />
         </div>
       </ColorfulAccent>
-      
+
       <MultiLayeredWave height={80} className="my-12" />
-      
+
       <div id="accessibility">
         <AccessibilitySection />
-      </div>
-      
-      <WaveDivider position="bottom" height={110} className="my-16" />
-      
+      </div>*/}
+
+      {/*<WaveDivider position="bottom" height={110} className="my-16" />*/}
+
       <ColorfulAccent accentType="background" intensity="light" className="py-8">
         <div id="founders">
           <FoundersSection />
         </div>
       </ColorfulAccent>
-      
+
       <MultiLayeredWave height={90} className="my-16" />
-      
+
       <div id="vision">
         <VisionMissionStorySection />
       </div>
-      
+
       <WaveDivider position="top" height={100} className="mb-0" />
       <Footer />
     </AnimatedBackground>

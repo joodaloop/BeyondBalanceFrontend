@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactHero from "@/components/ContactHero";
@@ -24,7 +23,7 @@ const Contact = () => {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 100);
     }
@@ -33,35 +32,41 @@ const Contact = () => {
     <AnimatedBackground className="min-h-screen bg-background" intensity="subtle">
       <CircularGradients count={5} />
       <Navigation />
-      
-      <ColorfulAccent accentType="glow" intensity="medium">
+
+      {/*<ColorfulAccent accentType="glow" intensity="medium">
         <ContactHero />
+      </ColorfulAccent>*/}
+
+      {/*<MultiLayeredWave height={70} className="my-10" />*/}
+
+      <ColorfulAccent accentType="background" intensity="light" className="pt-64 pb-24 text-center">
+        <h2 className="text-4xl md:text-5xl font-light text-foreground">
+          GET IN
+          <span className="block font-bold text-primary italic transform -rotate-1">TOUCH</span>
+          <span className="block font-light text-secondary transform rotate-1">WITH US</span>
+        </h2>
       </ColorfulAccent>
-      
-      <MultiLayeredWave height={70} className="my-10" />
-      
-      <ColorfulAccent accentType="background" intensity="light" className="py-8">
-        <div id="contact-form">
-          <ContactForm />
-        </div>
-      </ColorfulAccent>
-      
-      <WaveDivider position="bottom" height={120} className="my-16" />
-      
+
+      <div className="text-center">
+        <a href="https://wa.me/917977615383"> Text us on Whatsapp</a>
+      </div>
+
+      {/*<WaveDivider position="bottom" height={120} className="my-16" />*/}
+
       <div id="faq">
         <ContactFAQ />
       </div>
-      
-      <MultiLayeredWave height={85} className="my-12" />
-      
-      <div id="location">
+
+      {/*<MultiLayeredWave height={85} className="my-12" />*/}
+
+      {/*<div id="location">
         <ContactConclusion />
-      </div>
-      
-      <WaveDivider position="top" height={90} className="my-14" />
-      
+      </div>*/}
+
+      {/*<WaveDivider position="top" height={90} className="my-14" />*/}
+
       <CrisisResources />
-      
+
       <WaveDivider position="top" height={100} className="mb-0" />
       <Footer />
     </AnimatedBackground>
